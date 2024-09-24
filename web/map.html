@@ -18,6 +18,10 @@
                 if($('#suggestId').val() == ''){
                     return;
                 }
+                if ($('#lng').val() == 'y' || $('#lat').val()=='x'){
+                    alert('定位中，请稍后……')
+                    return;
+                }
                 var loc = $('#suggestId').val()+'#'+$('#lng').val()+','+$('#lat').val();
                 var u = window.location.href;
                 if (u.indexOf('type=f') != -1)
