@@ -155,6 +155,9 @@ function getUser() {
                 //验证成功，返回的是当前用户信息
                 if (data.code == 200) {
                     current_user = data.data[0];
+                    if (current_user.avatar == ''){
+                        current_user.avatar = '../img/default-header.jpg';
+                    }
                     console.log(current_user);
 
                     //验证用户通过后，开启ws，用于即时消息通信

@@ -33,8 +33,9 @@
     <script>
         $(function () {
             $.post('/account/api/userinfo','{}',function(d){
-                $('.avatar').attr('src',d.data[0].avatar);
-                $('#photoUrl').val(d.data[0].avatar);
+                var photo = d.data[0].avatar == '' ? '../img/default-header.jpg':d.data[0].avatar
+                $('.avatar').attr('src',photo);
+                $('#photoUrl').val(photo);
             });
 
             var roleName = (localStorage.getItem('current_role') == '0' ? 'user' : 'driver');
