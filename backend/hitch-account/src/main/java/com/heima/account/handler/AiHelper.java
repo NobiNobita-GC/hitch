@@ -54,7 +54,7 @@ public class AiHelper {
 
     * */
     public String getLicense(VehiclePO vehiclePO) throws IOException {
-
+        //TODO:任务2.1-车辆信息验证代码编写-2day
         return "00000";
     }
 
